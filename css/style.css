@@ -21,8 +21,19 @@
     color: whitesmoke;
     text-align: center;
     font-size: 1.1rem;
+    animation-name: agranda-titulo;
+    animation-duration: 1s;
 }
 
+@keyframes agranda-titulo {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.1);
+    }
+}
 
 .pie-pagina {
     width: 100vw;
@@ -43,12 +54,23 @@
 
 .links-footer a:hover {
     color: brown;
+    transition: 0.5s ease;
 }
 
 
 @media screen and (min-width:600px) {
     .pie-pagina{
         font-size: 1rem;
+    }
+
+    @keyframes agranda-titulo {
+        from{
+            transform: scale(1);
+        } 
+        
+        to{
+            transform: scale(1.3);
+        }
     }
 
     .titulo-home{
@@ -137,6 +159,7 @@ footer {
 
 .links:hover {
     color: brown;
+    transition: 0.5s ease;
 }
 
 /*main*/
@@ -150,9 +173,10 @@ footer {
 .container-main h1 {
     margin: 1rem 0rem 3rem 0rem;
     font-size: 2rem;
+    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     padding: 0.7rem;
     border-radius: 1rem;
-    color: wheat;
+    color: whitesmoke;
     display: inline-block;
 }
 
@@ -164,9 +188,10 @@ footer {
 
 .section1 h2 {
     margin: 1rem 0rem 3rem 0rem;
+    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     padding: 0.7rem;
     border-radius: 1rem;
-    color: wheat;
+    color: whitesmoke;
     display: inline-block;
 }
 
@@ -289,7 +314,19 @@ footer {
 .imagenes {
     width: 45%;
     margin-left: 0.8rem;
+    animation-name: agranda-imagen;
+    animation-duration: 1s;
 }
+
+@keyframes agranda-imagen {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.1);
+    }
+}  
 
 .cliente-tres {
     display: none;
@@ -405,9 +442,10 @@ footer {
 }
 
 .titulo-servicio {
+    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     padding: 0.5rem;
     border-radius: 1rem;
-    color: wheat;
+    color: whitesmoke;
     font-size: 2.7rem;
     margin-bottom: 2rem;
 }
@@ -429,9 +467,10 @@ footer {
     }
 
     .subtitulo-servicios {
+        background-image: linear-gradient(to right, black, rgb(107, 94, 71));
         padding: 0.3rem;
         border-radius: 1rem;
-        color: wheat;
+        color: whitesmoke;
         font-size: 2rem;
         text-align: center;
         margin-bottom: 2rem;
@@ -460,7 +499,7 @@ footer {
 }
 
 .grupos-form {
-    background-color: #000000;
+    background-image: linear-gradient(to right, black, rgb(171, 146, 102));
     padding: 0.6rem;
     border-radius: 1rem;
     box-shadow: 0.2rem 0.2rem 0.2rem #1a1a1a;
@@ -473,7 +512,7 @@ footer {
 }
 
 .botons input {
-    background-color: #000000;
+    background-image: linear-gradient(to right, black, rgb(147, 129, 97));
     color: whitesmoke;
     padding: 0.5rem;
     border-radius: 1rem;
@@ -482,6 +521,7 @@ footer {
 
 .titulo-contacto {
     font-size: 1.5rem;
+    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     margin: 0rem 0.1rem;
     padding: 0.3rem;
     border-radius: 1rem;
