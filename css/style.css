@@ -556,3 +556,17 @@ footer {
         width: 22rem;
     }
 }
+
+/*contactanos*/
+
+#background-contactanos{
+    background-image: none;
+    background-color: #dc3545;
+}
+
+.contenedor-contactanos{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
