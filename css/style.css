@@ -2,14 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* estilos home*/
 
 #contenedor-home {
     height: 100vh;
-    background: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.1)), url(img/edificio.jpg);
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(img/edificio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -21,18 +20,6 @@
     color: whitesmoke;
     text-align: center;
     font-size: 1.1rem;
-    animation-name: agranda-titulo;
-    animation-duration: 1s;
-}
-
-@keyframes agranda-titulo {
-    from{
-        transform: scale(1);
-    }
-
-    to{
-        transform: scale(1.1);
-    }
 }
 
 .pie-pagina {
@@ -46,6 +33,10 @@
     font-size: 0.7rem;
 }
 
+.pie-pagina p {
+    margin: 0;
+}
+
 .links-footer a {
     text-decoration: none;
     color: whitesmoke;
@@ -54,26 +45,15 @@
 
 .links-footer a:hover {
     color: brown;
-    transition: 0.5s ease;
+    transition: 0.4s ease;
 }
 
-
 @media screen and (min-width:600px) {
-    .pie-pagina{
+    .pie-pagina {
         font-size: 1rem;
     }
 
-    @keyframes agranda-titulo {
-        from{
-            transform: scale(1);
-        } 
-        
-        to{
-            transform: scale(1.3);
-        }
-    }
-
-    .titulo-home{
+    .titulo-home {
         font-size: 1.5rem;
     }
 }
@@ -87,7 +67,7 @@
 /*estilos nosotros*/
 
 body {
-    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/edificio.jpg);
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -98,8 +78,8 @@ body {
     grid-template-columns: 1fr 0.5fr 0.7fr;
     grid-template-rows: 0.1fr 1fr 0.01fr;
     grid-template-areas: "header header header"
-                        "main main main"
-                        "footer footer footer";
+        "main main main"
+        "footer footer footer";
     gap: 0.1rem;
 }
 
@@ -119,7 +99,6 @@ main {
     display: none;
 }
 
-
 footer {
     background-color: #000000;
     grid-area: footer;
@@ -128,38 +107,25 @@ footer {
     align-items: center;
 }
 
+.pie-nosotros p {
+    margin: 0;
+}
+
 /*header*/
 
-#menu-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.img {
+    display: none;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
 }
 
-#menu-nav img {
-    width: 10%;
-    margin: 0.5rem 0rem 0.5rem 0.5rem;
+.transition {
+    transition: 0.4s ease;
 }
 
-.container-list {
-    display: flex;
-    gap: 0.3rem;
-    margin-right: 0.5rem;
-}
-
-.container-list li {
-    font-size: 0.7rem;
-    list-style: none;
-}
-
-.links {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.links:hover {
-    color: brown;
-    transition: 0.5s ease;
+.color-burger {
+    background-color: rgb(33, 33, 33);
+    border-color: rgb(53, 53, 53);
 }
 
 /*main*/
@@ -173,13 +139,10 @@ footer {
 .container-main h1 {
     margin: 1rem 0rem 3rem 0rem;
     font-size: 2rem;
-    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     padding: 0.7rem;
     border-radius: 1rem;
     color: whitesmoke;
-    display: inline-block;
 }
-
 
 .section1 {
     color: rgb(200, 200, 200);
@@ -188,13 +151,10 @@ footer {
 
 .section1 h2 {
     margin: 1rem 0rem 3rem 0rem;
-    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     padding: 0.7rem;
     border-radius: 1rem;
     color: whitesmoke;
-    display: inline-block;
 }
-
 
 /*footer*/
 
@@ -215,8 +175,8 @@ footer {
         grid-template-columns: 1fr 0.5fr 0.7fr;
         grid-template-rows: 0.1fr 1fr 0.01fr;
         grid-template-areas: "header header header"
-                            "main main section1"
-                            "footer footer footer";
+            "main main section1"
+            "footer footer footer";
         gap: 0.1rem;
     }
 
@@ -227,10 +187,6 @@ footer {
 
     .links {
         font-size: 1rem;
-    }
-
-    #menu-nav img {
-        width: 7%;
     }
 
     .parrafos {
@@ -265,16 +221,21 @@ footer {
         color: brown;
     }
 
-    .section1{
+    .section1 {
         display: block;
     }
 
-    .section1 h2{
+    .section1 h2 {
         padding: 0.5rem;
     }
 
-    .container-main h1{
+    .container-main h1 {
         padding: 0.5rem;
+    }
+
+    .img {
+        display: block;
+        width: 6%;
     }
 }
 
@@ -288,10 +249,6 @@ footer {
         font-size: 1.2rem;
     }
 
-    #menu-nav img {
-        width: 5%;
-    }
-
     .parrafos {
         font-size: 1.5rem;
     }
@@ -300,18 +257,22 @@ footer {
         font-size: 2rem;
     }
 
-    .section1 h2{
+    .section1 h2 {
         padding: 1rem;
     }
 
-    .container-main h1{
+    .container-main h1 {
         padding: 0.9rem;
     }
 
+    .img {
+        width: 3%;
+    }
 }
 
 /* estilos clientes*/
 .imagenes {
+    height: 80%;
     width: 45%;
     margin-left: 0.8rem;
     animation-name: agranda-imagen;
@@ -319,14 +280,14 @@ footer {
 }
 
 @keyframes agranda-imagen {
-    from{
+    from {
         transform: scale(1);
     }
 
-    to{
+    to {
         transform: scale(1.1);
     }
-}  
+}
 
 .cliente-tres {
     display: none;
@@ -351,7 +312,6 @@ footer {
 
 }
 
-
 .cliente-uno {
     display: flex;
     justify-content: center;
@@ -368,7 +328,7 @@ footer {
 
 .parrafo-cliente {
     color: whitesmoke;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .parrafo-footer {
@@ -392,7 +352,7 @@ footer {
         width: 25%;
     }
 
-    .titulo-clientes{
+    .titulo-clientes {
         font-size: 2rem;
     }
 }
@@ -442,7 +402,6 @@ footer {
 }
 
 .titulo-servicio {
-    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     padding: 0.5rem;
     border-radius: 1rem;
     color: whitesmoke;
@@ -454,6 +413,7 @@ footer {
     color: whitesmoke;
     text-align: center;
     margin: 0rem 0.5rem;
+    overflow: hidden;
 }
 
 @media screen and (min-width:600px) {
@@ -467,7 +427,6 @@ footer {
     }
 
     .subtitulo-servicios {
-        background-image: linear-gradient(to right, black, rgb(107, 94, 71));
         padding: 0.3rem;
         border-radius: 1rem;
         color: whitesmoke;
@@ -482,7 +441,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    .subtitulo-servicios{
+    .subtitulo-servicios {
         padding: 1rem;
     }
 }
@@ -499,10 +458,10 @@ footer {
 }
 
 .grupos-form {
-    background-image: linear-gradient(to right, black, rgb(171, 146, 102));
     padding: 0.6rem;
     border-radius: 1rem;
     box-shadow: 0.2rem 0.2rem 0.2rem #1a1a1a;
+    background-color: #000000;
 }
 
 .botons {
@@ -512,16 +471,15 @@ footer {
 }
 
 .botons input {
-    background-image: linear-gradient(to right, black, rgb(147, 129, 97));
     color: whitesmoke;
+    background-color: #000000;
     padding: 0.5rem;
     border-radius: 1rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem #1a1a1a;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgb(33, 33, 33);
 }
 
 .titulo-contacto {
     font-size: 1.5rem;
-    background-image: linear-gradient(to right, black, rgb(107, 94, 71));
     margin: 0rem 0.1rem;
     padding: 0.3rem;
     border-radius: 1rem;
@@ -538,7 +496,7 @@ footer {
         padding: 1rem;
     }
 
-    .grupos-form{
+    .grupos-form {
         padding: 1rem;
     }
 
@@ -555,18 +513,4 @@ footer {
     .grupos-form input {
         width: 22rem;
     }
-}
-
-/*contactanos*/
-
-#background-contactanos{
-    background-image: none;
-    background-color: #dc3545;
-}
-
-.contenedor-contactanos{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
