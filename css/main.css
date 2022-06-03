@@ -1,0 +1,343 @@
+/* reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#contenedor-home .pie-pagina .links-footer a:hover, .pie-pagina .links-footer a:hover {
+  color: brown;
+  transition: 0.4s ease; }
+
+/* estilos home*/
+#contenedor-home {
+  height: 100vh;
+  background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  #contenedor-home .titulo-home {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.1rem; }
+  #contenedor-home .pie-pagina {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    margin: 0rem 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.7rem; }
+    #contenedor-home .pie-pagina p {
+      margin: 0; }
+    #contenedor-home .pie-pagina .links-footer a {
+      text-decoration: none;
+      color: whitesmoke;
+      margin-right: 0.3rem; }
+
+/* estilos nosotros*/
+body {
+  background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  body #container-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.7fr;
+    grid-template-rows: 0.1fr 1fr 0.01fr;
+    grid-template-areas: "header header header"
+ "main main main"
+ "footer footer footer";
+    gap: 0.1rem; }
+  body header {
+    background-color: #000000;
+    grid-area: header; }
+    body header .img {
+      display: none;
+      border-radius: 0.5rem;
+      margin-right: 1rem; }
+    body header .transition {
+      transition: 0.4s ease; }
+    body header .color-burger {
+      background-color: #212121;
+      border-color: #353535; }
+  body main {
+    grid-area: main;
+    border-radius: 1rem; }
+    body main .container-main {
+      text-align: center;
+      color: #c8c8c8;
+      font-size: 1rem;
+      margin: 0 1rem; }
+    body main .container-main h1 {
+      margin: 1rem 0rem 3rem 0rem;
+      font-size: 2rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+      color: whitesmoke; }
+  body .section1 {
+    grid-area: section1;
+    border-radius: 1rem;
+    display: none;
+    color: #c8c8c8;
+    text-align: center; }
+    body .section1 .section1 h2 {
+      margin: 1rem 0rem 3rem 0rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+      color: whitesmoke; }
+  body footer {
+    background-color: #000000;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body footer .pie-nosotros {
+      color: whitesmoke;
+      padding: 0.5rem;
+      font-size: 0.8rem; }
+      body footer .pie-nosotros .footer-nosotros {
+        display: none; }
+      body footer .pie-nosotros p {
+        margin: 0; }
+
+/*estilos clientes*/
+.titulo-clientes {
+  text-align: center;
+  margin-top: 5rem;
+  color: whitesmoke;
+  font-size: 1.7rem; }
+
+#container-clientes {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  #container-clientes .cliente-uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+  #container-clientes .cliente-dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+  #container-clientes .cliente-tres {
+    display: none; }
+  #container-clientes .cliente-cuatro {
+    display: none; }
+  #container-clientes .imagenes {
+    height: 80%;
+    width: 45%;
+    margin-left: 0.8rem;
+    animation-name: agranda-imagen;
+    animation-duration: 1s; }
+
+@keyframes agranda-imagen {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+  #container-clientes .parrafo-cliente {
+    color: whitesmoke;
+    font-size: 0.9rem; }
+
+.pie-pagina {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  margin: 0rem 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.7rem; }
+  .pie-pagina p {
+    margin: 0; }
+  .pie-pagina .links-footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right: 0.3rem; }
+
+/*estilos servicios*/
+#container-servicios {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+  #container-servicios .servicio-uno {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  #container-servicios .servicio-dos {
+    display: none; }
+  #container-servicios .titulo-servicio {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: whitesmoke;
+    font-size: 2.7rem;
+    margin-bottom: 2rem; }
+  #container-servicios .parrafo-servicio {
+    color: whitesmoke;
+    text-align: center;
+    margin: 0rem 0.5rem;
+    overflow: hidden; }
+
+/*estilos  contacto*/
+.container-form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: whitesmoke; }
+  .container-form .titulo-contacto {
+    font-size: 1.5rem;
+    margin: 0rem 0.1rem;
+    padding: 0.3rem;
+    border-radius: 1rem; }
+  .container-form .grupos-form {
+    padding: 0.6rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #1a1a1a;
+    background-color: #000000; }
+    .container-form .grupos-form input {
+      width: 8.7rem;
+      margin-left: 0.5rem; }
+
+.botons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0rem 1rem 1rem 2.5rem; }
+  .botons input {
+    color: whitesmoke;
+    background-color: #000000;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #212121; }
+
+/* media queries*/
+@media screen and (min-width: 600px) {
+  #contenedor-home .titulo-home h1 {
+    font-size: 2.5rem; }
+  #contenedor-home .pie-pagina {
+    font-size: 0.8rem; }
+  .pie-pagina {
+    font-size: 0.8rem; }
+  body header .img {
+    display: block;
+    width: 6%; }
+  body #container-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 0.5fr 0.7fr;
+    grid-template-rows: 0.1fr 1fr 0.01fr;
+    grid-template-areas: "header header header"
+ "main main section1"
+ "footer footer footer";
+    gap: 0.1rem; }
+  body main .container-main h1 {
+    padding: 0.5rem; }
+  body main .container-main .parrafo-uno {
+    font-size: 1.4rem; }
+  body .section1 {
+    margin-right: 1rem; }
+    body .section1 .parrafos {
+      font-size: 1.1rem; }
+  body footer .pie-nosotros {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    margin: 0rem 1rem;
+    font-size: 1rem; }
+    body footer .pie-nosotros .footer-nosotros {
+      display: block; }
+    body footer .pie-nosotros .footer-nosotros a {
+      text-decoration: none;
+      color: whitesmoke;
+      margin-right: 0.3rem; }
+    body footer .pie-nosotros .footer-nosotros a:hover {
+      color: brown;
+      transition: 0.4s ease; }
+  body .section1 {
+    display: block; }
+    body .section1 h2 {
+      padding: 0.5rem; }
+  .titulo-clientes {
+    font-size: 2rem; }
+  #container-clientes .imagenes {
+    width: 25%; }
+  #container-clientes .cliente-tres {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+  #container-clientes .parrafo-cliente {
+    font-size: 1.3rem; }
+  #container-servicios .servicio-dos {
+    display: block;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    #container-servicios .servicio-dos .subtitulo-servicios {
+      padding: 0.3rem;
+      border-radius: 1rem;
+      color: whitesmoke;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem; }
+  .container-form .titulo-contacto {
+    font-size: 1.9rem;
+    padding: 1rem; }
+  .container-form .grupos-form {
+    padding: 1rem; }
+    .container-form .grupos-form input {
+      width: 16rem; } }
+
+@media screen and (min-width: 1024px) {
+  #contenedor-home .titulo-home h1 {
+    font-size: 3rem; }
+  #contenedor-home .pie-pagina {
+    font-size: 0.9rem; }
+  .pie-pagina {
+    font-size: 0.9rem; }
+  body header .img {
+    width: 3%; }
+  body .section1 .parrafos {
+    font-size: 1.3rem; }
+  body .section1 h2 {
+    padding: 1rem; }
+  body main .container-main h1 {
+    padding: 0.9rem; }
+  body main .container-main .parrafo-uno {
+    font-size: 1.7rem; }
+  .titulo-clientes {
+    margin: 4.5rem 0rem;
+    font-size: 2.5rem; }
+  #container-clientes .imagenes {
+    width: 15%; }
+  #container-clientes .cliente-cuatro {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+  #container-clientes .parrafo-cliente {
+    font-size: 1.6rem; }
+  #container-servicios .parrafo-servicio {
+    font-size: 1.5rem; }
+  #container-servicios .servicio-dos .subtitulo-servicios {
+    padding: 1rem; }
+  .container-form .titulo-contacto {
+    font-size: 2.2rem; }
+  .container-form .grupos-form input {
+    width: 22rem; } }

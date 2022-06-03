@@ -1,0 +1,310 @@
+/* reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// imports
+@import "base/variables";
+@import "base/mixin";
+@import "base/extend";
+
+//nestin
+
+/* estilos home*/
+#contenedor-home {
+    height: 100vh;
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .titulo-home {
+        color: $color-texto;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .pie-pagina {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-texto;
+        margin: 0rem 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.7rem;
+
+        p {
+            margin: 0;
+        }
+
+        .links-footer a {
+            text-decoration: none;
+            color: $color-texto;
+            margin-right: 0.3rem;
+        }
+
+        .links-footer a:hover {
+            @extend %hover;
+        }
+    }
+}
+
+/* estilos nosotros*/
+body {
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    #container-grid {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 0.7fr;
+        grid-template-rows: 0.1fr 1fr 0.01fr;
+        grid-template-areas: "header header header"
+            "main main main"
+            "footer footer footer";
+        gap: 0.1rem;
+    }
+
+    header {
+        background-color: $color-encabezado;
+        grid-area: header;
+
+        .img {
+            display: none;
+            border-radius: 0.5rem;
+            margin-right: $medida-principal;
+        }
+
+        .transition {
+            transition: 0.4s ease;
+        }
+
+        .color-burger {
+            background-color: rgb(33, 33, 33);
+            border-color: rgb(53, 53, 53);
+        }
+    }
+
+    main {
+        grid-area: main;
+        border-radius: $medida-principal;
+
+        .container-main {
+            text-align: center;
+            color: rgb(200, 200, 200);
+            font-size: $medida-principal;
+            margin: 0 1rem;
+        }
+
+        .container-main h1 {
+            margin: $medida-principal 0rem 3rem 0rem;
+            font-size: 2rem;
+            padding: 0.7rem;
+            border-radius: $medida-principal;
+            color: $color-texto;
+        }
+    }
+
+    .section1 {
+        grid-area: section1;
+        border-radius: $medida-principal;
+        display: none;
+        color: rgb(200, 200, 200);
+        text-align: center;
+
+        .section1 h2 {
+            margin: $medida-principal 0rem 3rem 0rem;
+            padding: 0.7rem;
+            border-radius: $medida-principal;
+            color: $color-texto;
+        }
+    }
+
+    footer {
+        background-color: $color-encabezado;
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pie-nosotros {
+            color: $color-texto;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+
+            .footer-nosotros {
+                display: none;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*estilos clientes*/
+.titulo-clientes {
+    text-align: center;
+    margin-top: 5rem;
+    color: $color-texto;
+    font-size: 1.7rem;
+}
+
+#container-clientes {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .cliente-uno {
+        @include flex;
+    }
+
+    .cliente-dos {
+        @include flex;
+    }
+
+    .cliente-tres {
+        display: none;
+    }
+
+    .cliente-cuatro {
+        display: none;
+    }
+
+    .imagenes {
+        height: 80%;
+        width: 45%;
+        margin-left: 0.8rem;
+        animation-name: agranda-imagen;
+        animation-duration: 1s;
+    }
+
+    @keyframes agranda-imagen {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+    .parrafo-cliente {
+        color: $color-texto;
+        font-size: 0.9rem;
+    }
+}
+
+.pie-pagina {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-texto;
+    margin: 0rem 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+
+    p {
+        margin: 0;
+    }
+
+    .links-footer a {
+        text-decoration: none;
+        color: $color-texto;
+        margin-right: 0.3rem;
+    }
+
+    .links-footer a:hover {
+        @extend %hover;
+    }
+}
+
+/*estilos servicios*/
+#container-servicios {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: $medida-principal;
+
+    .servicio-uno {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .servicio-dos {
+        display: none;
+    }
+
+    .titulo-servicio {
+        padding: 0.5rem;
+        border-radius: $medida-principal;
+        color: $color-texto;
+        font-size: 2.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .parrafo-servicio {
+        color: $color-texto;
+        text-align: center;
+        margin: 0rem 0.5rem;
+        overflow: hidden;
+    }
+}
+
+/*estilos  contacto*/
+.container-form {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $color-texto;
+
+    .titulo-contacto {
+        font-size: 1.5rem;
+        margin: 0rem 0.1rem;
+        padding: 0.3rem;
+        border-radius: $medida-principal;
+    }
+
+    .grupos-form {
+        padding: 0.6rem;
+        border-radius: $medida-principal;
+        box-shadow: 0.2rem 0.2rem 0.2rem #1a1a1a;
+        background-color: $color-encabezado;
+
+        input {
+            width: 8.7rem;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.botons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0rem $medida-principal $medida-principal 2.5rem;
+
+    input {
+        color: $color-texto;
+        background-color: $color-encabezado;
+        padding: 0.5rem;
+        border-radius: $medida-principal;
+        box-shadow: 0.1rem 0.1rem 0.1rem rgb(33, 33, 33);
+    }
+}
+
+//import media queries
+/* media queries*/
+@import "base/medias";

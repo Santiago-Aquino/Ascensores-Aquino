@@ -1,0 +1,206 @@
+@media screen and (min-width:600px) {
+
+    //home
+    #contenedor-home .titulo-home h1 {
+        font-size: 2.5rem;
+    }
+
+    #contenedor-home .pie-pagina {
+        font-size: 0.8rem;
+    }
+
+    .pie-pagina {
+        font-size: 0.8rem;
+    }
+
+    body header .img {
+        display: block;
+        width: 6%;
+    }
+
+    //nosotros
+    body #container-grid {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1.3fr 0.5fr 0.7fr;
+        grid-template-rows: 0.1fr 1fr 0.01fr;
+        grid-template-areas: "header header header"
+            "main main section1"
+            "footer footer footer";
+        gap: 0.1rem;
+    }
+
+    body main .container-main h1 {
+        padding: 0.5rem;
+    }
+
+    body main .container-main .parrafo-uno {
+        font-size: 1.4rem;
+    }
+
+    body .section1 {
+        margin-right: $medida-principal;
+
+        .parrafos {
+            font-size: 1.1rem;
+        }
+    }
+
+    body footer .pie-nosotros {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-texto;
+        margin: 0rem 1rem;
+        font-size: $medida-principal;
+
+        .footer-nosotros {
+            display: block;
+        }
+
+        .footer-nosotros a {
+            text-decoration: none;
+            color: $color-texto;
+            margin-right: 0.3rem;
+        }
+
+        .footer-nosotros a:hover {
+            color: $color-hover;
+            transition: 0.4s ease;
+        }
+    }
+
+    body .section1 {
+        display: block;
+
+        h2 {
+            padding: 0.5rem;
+        }
+    }
+
+    //clientes
+    .titulo-clientes {
+        font-size: 2rem;
+    }
+
+    #container-clientes .imagenes {
+        width: 25%;
+    }
+
+    #container-clientes .cliente-tres {
+        display: block;
+        @include flex;
+    }
+
+    #container-clientes .parrafo-cliente {
+        font-size: 1.3rem;
+    }
+
+    //servicios
+    #container-servicios .servicio-dos {
+        display: block;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .subtitulo-servicios {
+            padding: 0.3rem;
+            border-radius: $medida-principal;
+            color: $color-texto;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    //contacto
+    .container-form .titulo-contacto {
+        font-size: 1.9rem;
+        padding: $medida-principal;
+    }
+
+    .container-form .grupos-form {
+        padding: $medida-principal;
+
+        input {
+            width: 16rem;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    //home
+    #contenedor-home .titulo-home h1 {
+        font-size: 3rem;
+    }
+
+    #contenedor-home .pie-pagina {
+        font-size: 0.9rem;
+    }
+
+    .pie-pagina {
+        font-size: 0.9rem;
+    }
+
+    body header .img {
+        width: 3%;
+    }
+
+    //nosotros
+    body .section1 .parrafos {
+        font-size: 1.3rem;
+    }
+
+    body .section1 h2 {
+        padding: $medida-principal;
+    }
+
+    body main .container-main h1 {
+        padding: 0.9rem;
+    }
+
+    body main .container-main .parrafo-uno {
+        font-size: 1.7rem;
+    }
+
+    //clientes
+    .titulo-clientes {
+        margin: 4.5rem 0rem;
+        font-size: 2.5rem;
+    }
+
+    #container-clientes .imagenes {
+        width: 15%;
+    }
+
+    #container-clientes .cliente-cuatro {
+        display: block;
+        @include flex;
+    }
+
+    #container-clientes .parrafo-cliente {
+        font-size: 1.6rem;
+    }
+
+    #container-servicios .parrafo-servicio {
+        font-size: 1.5rem;
+    }
+
+    //servicios
+    #container-servicios .servicio-dos .subtitulo-servicios {
+        padding: $medida-principal;
+    }
+
+    //contacto
+    .container-form .titulo-contacto {
+        font-size: 2.2rem;
+    }
+
+    .container-form .grupos-form input {
+        width: 22rem;
+    }
+}
