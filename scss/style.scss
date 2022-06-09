@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 // imports
 @import "base/variables";
 @import "base/mixin";
@@ -50,6 +51,7 @@
         .links-footer a:hover {
             @extend %hover;
         }
+
     }
 }
 
@@ -163,11 +165,27 @@ body {
     justify-content: space-evenly;
 
     .cliente-uno {
-        @include flex;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-encabezado;
+        border-radius: $medida-principal;
+        margin: 0rem 4rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
     }
 
     .cliente-dos {
-        @include flex;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-encabezado;
+        border-radius: $medida-principal;
+        margin: 0rem 4rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
     }
 
     .cliente-tres {
@@ -180,25 +198,17 @@ body {
 
     .imagenes {
         height: 80%;
-        width: 45%;
-        margin-left: 0.8rem;
-        animation-name: agranda-imagen;
-        animation-duration: 1s;
-    }
-
-    @keyframes agranda-imagen {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(1.1);
-        }
+        width: 100%;
+        margin: 0rem 2rem;
+        border-radius: 0.4rem;
     }
 
     .parrafo-cliente {
         color: $color-texto;
         font-size: 0.9rem;
+        text-align: center;
+        margin: 0.5rem;
+        overflow: hidden;
     }
 }
 
@@ -263,45 +273,53 @@ body {
 }
 
 /*estilos  contacto*/
-.container-form {
+form {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    color: $color-texto;
 
     .titulo-contacto {
-        font-size: 1.5rem;
-        margin: 0rem 0.1rem;
-        padding: 0.3rem;
-        border-radius: $medida-principal;
+        color: $color-texto;
+        margin: 4rem;
+        text-align: center;
     }
 
-    .grupos-form {
-        padding: 0.6rem;
-        border-radius: $medida-principal;
-        box-shadow: 0.2rem 0.2rem 0.2rem #1a1a1a;
-        background-color: $color-encabezado;
-
-        input {
-            width: 8.7rem;
-            margin-left: 0.5rem;
-        }
-    }
-}
-
-.botons {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0rem $medida-principal $medida-principal 2.5rem;
-
-    input {
+    .container-form {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
         color: $color-texto;
         background-color: $color-encabezado;
-        padding: 0.5rem;
+        margin: 0rem 2rem;
         border-radius: $medida-principal;
-        box-shadow: 0.1rem 0.1rem 0.1rem rgb(33, 33, 33);
+
+        .grupos-form {
+            width: 100%;
+
+            label {
+                color: $color-texto;
+                margin: 0rem 0rem 0.3rem $medida-principal;
+            }
+
+            input {
+                margin-left: $medida-principal;
+                width: 90%;
+            }
+        }
+
+        .botons {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            margin-left: 2rem;
+
+            input {
+                border-radius: $medida-principal;
+                padding: 0.3rem;
+                color: $color-encabezado;
+                background-color: rgb(221, 221, 221);
+            }
+        }
     }
 }
 

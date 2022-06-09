@@ -47,9 +47,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 0.5fr 0.7fr;
     grid-template-rows: 0.1fr 1fr 0.01fr;
-    grid-template-areas: "header header header"
- "main main main"
- "footer footer footer";
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
     gap: 0.1rem; }
   body header {
     background-color: #000000;
@@ -116,34 +114,40 @@ body {
   flex-direction: column;
   justify-content: space-evenly; }
   #container-clientes .cliente-uno {
+    height: 40vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem; }
+    background-color: #000000;
+    border-radius: 1rem;
+    margin: 0rem 4rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c; }
   #container-clientes .cliente-dos {
+    height: 40vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem; }
+    background-color: #000000;
+    border-radius: 1rem;
+    margin: 0rem 4rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c; }
   #container-clientes .cliente-tres {
     display: none; }
   #container-clientes .cliente-cuatro {
     display: none; }
   #container-clientes .imagenes {
     height: 80%;
-    width: 45%;
-    margin-left: 0.8rem;
-    animation-name: agranda-imagen;
-    animation-duration: 1s; }
-
-@keyframes agranda-imagen {
-  from {
-    transform: scale(1); }
-  to {
-    transform: scale(1.1); } }
+    width: 100%;
+    margin: 0rem 2rem;
+    border-radius: 0.4rem; }
   #container-clientes .parrafo-cliente {
     color: whitesmoke;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0.5rem;
+    overflow: hidden; }
 
 .pie-pagina {
   width: 100vw;
@@ -188,37 +192,40 @@ body {
     overflow: hidden; }
 
 /*estilos  contacto*/
-.container-form {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  color: whitesmoke; }
-  .container-form .titulo-contacto {
-    font-size: 1.5rem;
-    margin: 0rem 0.1rem;
-    padding: 0.3rem;
-    border-radius: 1rem; }
-  .container-form .grupos-form {
-    padding: 0.6rem;
-    border-radius: 1rem;
-    box-shadow: 0.2rem 0.2rem 0.2rem #1a1a1a;
-    background-color: #000000; }
-    .container-form .grupos-form input {
-      width: 8.7rem;
-      margin-left: 0.5rem; }
-
-.botons {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0rem 1rem 1rem 2.5rem; }
-  .botons input {
+form {
+  height: 100vh; }
+  form .titulo-contacto {
+    color: whitesmoke;
+    margin: 4rem;
+    text-align: center; }
+  form .container-form {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     color: whitesmoke;
     background-color: #000000;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem #212121; }
+    margin: 0rem 2rem;
+    border-radius: 1rem; }
+    form .container-form .grupos-form {
+      width: 100%; }
+      form .container-form .grupos-form label {
+        color: whitesmoke;
+        margin: 0rem 0rem 0.3rem 1rem; }
+      form .container-form .grupos-form input {
+        margin-left: 1rem;
+        width: 90%; }
+    form .container-form .botons {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      margin-left: 2rem; }
+      form .container-form .botons input {
+        border-radius: 1rem;
+        padding: 0.3rem;
+        color: #000000;
+        background-color: #dddddd; }
 
 /* media queries*/
 @media screen and (min-width: 600px) {
@@ -236,9 +243,7 @@ body {
     display: grid;
     grid-template-columns: 1.3fr 0.5fr 0.7fr;
     grid-template-rows: 0.1fr 1fr 0.01fr;
-    grid-template-areas: "header header header"
- "main main section1"
- "footer footer footer";
+    grid-template-areas: "header header header" "main main section1" "footer footer footer";
     gap: 0.1rem; }
   body main .container-main h1 {
     padding: 0.5rem; }
@@ -271,16 +276,34 @@ body {
       padding: 0.5rem; }
   .titulo-clientes {
     font-size: 2rem; }
-  #container-clientes .imagenes {
-    width: 25%; }
-  #container-clientes .cliente-tres {
-    display: block;
+  #container-clientes {
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem; }
-  #container-clientes .parrafo-cliente {
-    font-size: 1.3rem; }
+    flex-direction: row;
+    align-items: center; }
+    #container-clientes .cliente-uno {
+      height: 60vh;
+      margin: 0rem 1rem; }
+    #container-clientes .cliente-dos {
+      height: 60vh;
+      margin: 0rem 1rem; }
+    #container-clientes .cliente-tres {
+      height: 60vh;
+      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #000000;
+      border-radius: 1rem;
+      box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
+      margin: 0rem 1rem; }
+    #container-clientes .parrafo-cliente {
+      font-size: 1.1rem;
+      overflow: hidden; }
+    #container-clientes .imagenes {
+      width: 100%;
+      margin: 0rem 2rem; }
   #container-servicios .servicio-dos {
     display: block;
     height: 70vh;
@@ -295,13 +318,11 @@ body {
       font-size: 2rem;
       text-align: center;
       margin-bottom: 2rem; }
-  .container-form .titulo-contacto {
-    font-size: 1.9rem;
-    padding: 1rem; }
-  .container-form .grupos-form {
-    padding: 1rem; }
-    .container-form .grupos-form input {
-      width: 16rem; } }
+  form .container-form {
+    margin: 0rem 8rem; }
+    form .container-form .grupos-form {
+      display: flex;
+      flex-direction: column; } }
 
 @media screen and (min-width: 1024px) {
   #contenedor-home .titulo-home h1 {
@@ -325,19 +346,32 @@ body {
     font-size: 2.5rem; }
   #container-clientes .imagenes {
     width: 15%; }
+  #container-clientes .cliente-uno {
+    margin: 0rem 2rem; }
+  #container-clientes .cliente-dos {
+    margin: 0rem 2rem; }
+  #container-clientes .cliente-tres {
+    margin: 0rem 2rem; }
   #container-clientes .cliente-cuatro {
     display: block;
+    height: 60vh;
+    display: block;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem; }
+    background-color: #000000;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
+    margin: 0rem 2rem; }
   #container-clientes .parrafo-cliente {
-    font-size: 1.6rem; }
-  #container-servicios .parrafo-servicio {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
+  #container-clientes .imagenes {
+    width: 100%;
+    margin: 0rem 2rem; }
   #container-servicios .servicio-dos .subtitulo-servicios {
     padding: 1rem; }
-  .container-form .titulo-contacto {
-    font-size: 2.2rem; }
-  .container-form .grupos-form input {
-    width: 22rem; } }
+  #container-servicios .parrafo-servicio {
+    font-size: 1.5rem; }
+  form .container-form {
+    margin: 0rem 12rem; } }
