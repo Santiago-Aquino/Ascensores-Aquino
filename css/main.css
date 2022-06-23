@@ -11,7 +11,6 @@
 /* estilos home*/
 #contenedor-home {
   height: 100vh;
-  background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -39,7 +38,7 @@
 
 /* estilos nosotros*/
 body {
-  background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(../img/edificio.jpg);
+  background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.5)), url(../img/edificio.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   body #container-grid {
@@ -48,7 +47,7 @@ body {
     grid-template-columns: 1fr 0.5fr 0.7fr;
     grid-template-rows: 0.1fr 1fr 0.01fr;
     grid-template-areas: "header header header" "main main main" "footer footer footer";
-    gap: 0.1rem; }
+    gap: 5rem; }
   body header {
     background-color: #000000;
     grid-area: header; }
@@ -68,24 +67,23 @@ body {
       text-align: center;
       color: #c8c8c8;
       font-size: 1rem;
-      margin: 0 1rem; }
-    body main .container-main h1 {
-      margin: 1rem 0rem 3rem 0rem;
-      font-size: 2rem;
-      padding: 0.7rem;
-      border-radius: 1rem;
-      color: whitesmoke; }
+      margin: 0rem 1rem; }
+      body main .container-main h1 {
+        font-size: 2.5rem;
+        border-radius: 1rem;
+        color: whitesmoke;
+        margin-bottom: 2rem; }
+      body main .container-main .parrafo-uno {
+        margin: 3rem 1rem 0rem 1rem; }
   body .section1 {
     grid-area: section1;
-    border-radius: 1rem;
     display: none;
     color: #c8c8c8;
     text-align: center; }
-    body .section1 .section1 h2 {
-      margin: 1rem 0rem 3rem 0rem;
-      padding: 0.7rem;
+    body .section1 h2 {
       border-radius: 1rem;
-      color: whitesmoke; }
+      color: whitesmoke;
+      font-size: 2rem; }
   body footer {
     background-color: #000000;
     grid-area: footer;
@@ -95,7 +93,7 @@ body {
     body footer .pie-nosotros {
       color: whitesmoke;
       padding: 0.5rem;
-      font-size: 0.8rem; }
+      font-size: 0.7rem; }
       body footer .pie-nosotros .footer-nosotros {
         display: none; }
       body footer .pie-nosotros p {
@@ -116,9 +114,9 @@ body {
   #container-clientes .cliente-uno {
     height: 40vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #000000;
     border-radius: 1rem;
     margin: 0rem 4rem;
@@ -126,9 +124,9 @@ body {
   #container-clientes .cliente-dos {
     height: 40vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #000000;
     border-radius: 1rem;
     margin: 0rem 4rem;
@@ -167,29 +165,32 @@ body {
 
 /*estilos servicios*/
 #container-servicios {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  gap: 1rem; }
+  flex-direction: column;
+  align-items: center; }
+  #container-servicios .titulo-servicio {
+    color: whitesmoke;
+    font-size: 3.5rem;
+    margin-top: 4rem; }
   #container-servicios .servicio-uno {
     height: 70vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center; }
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    #container-servicios .servicio-uno .imagen-servicio1 {
+      margin-bottom: 1rem;
+      width: 80%;
+      border-radius: 1rem; }
   #container-servicios .servicio-dos {
     display: none; }
-  #container-servicios .titulo-servicio {
-    padding: 0.5rem;
-    border-radius: 1rem;
-    color: whitesmoke;
-    font-size: 2.7rem;
-    margin-bottom: 2rem; }
   #container-servicios .parrafo-servicio {
     color: whitesmoke;
-    text-align: center;
-    margin: 0rem 0.5rem;
-    overflow: hidden; }
+    margin: 1rem 2rem;
+    font-weight: bold; }
+    #container-servicios .parrafo-servicio li {
+      margin-bottom: 1rem; }
 
 /*estilos  contacto*/
 form {
@@ -215,7 +216,7 @@ form {
         margin: 0rem 0rem 0.3rem 1rem; }
       form .container-form .grupos-form input {
         margin-left: 1rem;
-        width: 90%; }
+        width: 85%; }
     form .container-form .botons {
       width: 100%;
       display: flex;
@@ -241,12 +242,12 @@ form {
   body #container-grid {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1.3fr 0.5fr 0.7fr;
+    grid-template-columns: 1.3fr 0.5fr 0.5fr;
     grid-template-rows: 0.1fr 1fr 0.01fr;
     grid-template-areas: "header header header" "main main section1" "footer footer footer";
-    gap: 0.1rem; }
+    gap: 5rem; }
   body main .container-main h1 {
-    padding: 0.5rem; }
+    font-size: 3rem; }
   body main .container-main .parrafo-uno {
     font-size: 1.4rem; }
   body .section1 {
@@ -259,8 +260,8 @@ form {
     justify-content: space-between;
     align-items: center;
     color: whitesmoke;
-    margin: 0rem 1rem;
-    font-size: 1rem; }
+    margin: 0rem 0.5rem;
+    font-size: 0.8rem; }
     body footer .pie-nosotros .footer-nosotros {
       display: block; }
     body footer .pie-nosotros .footer-nosotros a {
@@ -291,9 +292,9 @@ form {
       height: 60vh;
       display: block;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       background-color: #000000;
       border-radius: 1rem;
       box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
@@ -304,25 +305,30 @@ form {
     #container-clientes .imagenes {
       width: 100%;
       margin: 0rem 2rem; }
+  #container-servicios .servicio-uno {
+    flex-direction: row;
+    align-items: center; }
+    #container-servicios .servicio-uno .imagen-servicio1 {
+      width: 50%;
+      margin: 0rem 2rem; }
   #container-servicios .servicio-dos {
     display: block;
     height: 70vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center; }
-    #container-servicios .servicio-dos .subtitulo-servicios {
-      padding: 0.3rem;
-      border-radius: 1rem;
-      color: whitesmoke;
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 2rem; }
+    #container-servicios .servicio-dos .imagen-servicio2 {
+      width: 50%;
+      margin: 0rem 2rem;
+      border-radius: 1rem; }
+  .parrafo-servicio {
+    font-size: 1.1rem; }
   form .container-form {
     margin: 0rem 8rem; }
     form .container-form .grupos-form {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column; }
+      form .container-form .grupos-form input {
+        width: 90%; } }
 
 @media screen and (min-width: 1024px) {
   #contenedor-home .titulo-home h1 {
@@ -334,13 +340,17 @@ form {
   body header .img {
     width: 3%; }
   body .section1 .parrafos {
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    margin: 0rem 3rem; }
   body .section1 h2 {
     padding: 1rem; }
   body main .container-main h1 {
     padding: 0.9rem; }
   body main .container-main .parrafo-uno {
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    margin: 0rem 3rem; }
+  body footer .pie-nosotros {
+    font-size: 0.9rem; }
   .titulo-clientes {
     margin: 4.5rem 0rem;
     font-size: 2.5rem; }
@@ -357,9 +367,9 @@ form {
     height: 60vh;
     display: block;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #000000;
     border-radius: 1rem;
     box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
@@ -369,9 +379,11 @@ form {
   #container-clientes .imagenes {
     width: 100%;
     margin: 0rem 2rem; }
-  #container-servicios .servicio-dos .subtitulo-servicios {
-    padding: 1rem; }
-  #container-servicios .parrafo-servicio {
+  #container-servicios .servicio-uno .imagen-servicio1 {
+    width: 40%; }
+  #container-servicios .servicio-dos .imagen-servicio2 {
+    width: 40%; }
+  .parrafo-servicio {
     font-size: 1.5rem; }
   form .container-form {
     margin: 0rem 12rem; } }

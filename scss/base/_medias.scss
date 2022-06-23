@@ -22,16 +22,16 @@
     body #container-grid {
         height: 100vh;
         display: grid;
-        grid-template-columns: 1.3fr 0.5fr 0.7fr;
+        grid-template-columns: 1.3fr 0.5fr 0.5fr;
         grid-template-rows: 0.1fr 1fr 0.01fr;
         grid-template-areas: "header header header"
             "main main section1"
             "footer footer footer";
-        gap: 0.1rem;
+        gap: 5rem;
     }
 
     body main .container-main h1 {
-        padding: 0.5rem;
+        font-size: 3rem;
     }
 
     body main .container-main .parrafo-uno {
@@ -52,8 +52,8 @@
         justify-content: space-between;
         align-items: center;
         color: $color-texto;
-        margin: 0rem $medida-principal;
-        font-size: $medida-principal;
+        margin: 0rem 0.5rem;
+        font-size: 0.8rem;
 
         .footer-nosotros {
             display: block;
@@ -81,7 +81,7 @@
 
     //clientes
     .titulo-clientes {
-        font-size: 2rem;
+        font-size: $medida-secundario;
     }
 
     #container-clientes {
@@ -97,16 +97,14 @@
 
         .cliente-dos {
             height: 60vh;
-            margin: 0rem 1rem;
+            margin: 0rem $medida-principal;
         }
 
         .cliente-tres {
             height: 60vh;
             display: block;
-            display: flex;
+            @include flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             background-color: $color-encabezado;
             border-radius: $medida-principal;
             box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
@@ -120,34 +118,49 @@
 
         .imagenes {
             width: 100%;
-            margin: 0rem 2rem;
+            margin: 0rem $medida-secundario;
         }
     }
 
     //servicios
+    #container-servicios .servicio-uno {
+        flex-direction: row;
+        align-items: center;
+
+        .imagen-servicio1 {
+            width: 50%;
+            margin: 0rem $medida-secundario;
+        }
+    }
+
     #container-servicios .servicio-dos {
         display: block;
         height: 70vh;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
 
-        .subtitulo-servicios {
-            padding: 0.3rem;
+        .imagen-servicio2 {
+            width: 50%;
+            margin: 0rem $medida-secundario;
             border-radius: $medida-principal;
-            color: $color-texto;
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 2rem;
         }
     }
+
+    .parrafo-servicio {
+        font-size: 1.1rem;
+    }
+
     //contacto
-    form .container-form{
+    form .container-form {
         margin: 0rem 8rem;
-        .grupos-form{
+
+        .grupos-form {
             display: flex;
             flex-direction: column;
+
+            input {
+                width: 90%;
+            }
         }
     }
 }
@@ -174,6 +187,7 @@
     //nosotros
     body .section1 .parrafos {
         font-size: 1.3rem;
+        margin: 0rem 3rem;
     }
 
     body .section1 h2 {
@@ -186,6 +200,11 @@
 
     body main .container-main .parrafo-uno {
         font-size: 1.7rem;
+        margin: 0rem 3rem;
+    }
+
+    body footer .pie-nosotros {
+        font-size: 0.9rem;
     }
 
     //clientes
@@ -199,29 +218,27 @@
     }
 
     #container-clientes .cliente-uno {
-        margin: 0rem 2rem;
+        margin: 0rem $medida-secundario;
     }
 
     #container-clientes .cliente-dos {
-        margin: 0rem 2rem;
+        margin: 0rem $medida-secundario;
     }
 
     #container-clientes .cliente-tres {
-        margin: 0rem 2rem;
+        margin: 0rem $medida-secundario;
     }
 
     #container-clientes .cliente-cuatro {
         display: block;
         height: 60vh;
         display: block;
-        display: flex;
+        @include flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background-color: $color-encabezado;
         border-radius: $medida-principal;
         box-shadow: 0.2rem 0.2rem 0.2rem #1c1c1c;
-        margin: 0rem 2rem;
+        margin: 0rem $medida-secundario;
     }
 
     #container-clientes .parrafo-cliente {
@@ -230,19 +247,24 @@
 
     #container-clientes .imagenes {
         width: 100%;
-        margin: 0rem 2rem;
+        margin: 0rem $medida-secundario;
     }
 
     //servicios
-    #container-servicios .servicio-dos .subtitulo-servicios {
-        padding: $medida-principal;
+    #container-servicios .servicio-uno .imagen-servicio1 {
+        width: 40%;
     }
 
-    #container-servicios .parrafo-servicio {
+    #container-servicios .servicio-dos .imagen-servicio2 {
+        width: 40%;
+    }
+
+    .parrafo-servicio {
         font-size: 1.5rem;
     }
+
     //contacto
-    form .container-form{
+    form .container-form {
         margin: 0rem 12rem;
     }
 }
